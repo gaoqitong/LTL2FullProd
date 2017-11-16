@@ -70,6 +70,7 @@ This package allows you to plot the Buchi and Product Automaton as a graph, whic
   </tr>
 </table>
 The following is a demo of plotting:
+
 ```python
 #plot buchi
 my_buchi.plot()
@@ -77,5 +78,6 @@ my_buchi.plot()
 #plot full product
 full_prod_graph = full_prod.return_graph()
 plot(full_prod_graph,'full_prod')
+
 ```
 
