@@ -59,14 +59,14 @@ This package allows you to plot the Buchi and Product Automaton as a graph, whic
 
 <table align="center">
   <tr>
-    <td> <img src="buchi.png" alt="Drawing" style="width: 250px;"/> </td>
+    <td> <img src="buchi.png" alt="Drawing" style="width: 150px;"/> </td>
 
   </tr>
 </table>
 
 <table align="center">
   <tr>
-    <td> <img src="fullprod.png" alt="Drawing" style="width: 250px;"/> </td>
+    <td> <img src="fullprod.png" alt="Drawing" style="width: 450px;"/> </td>
   </tr>
 </table>
 The following is a demo of plotting:
