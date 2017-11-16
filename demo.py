@@ -1,6 +1,7 @@
 from full_prod import *
 from buchi import buchi_from_ltl
 
+#define region
 r4 = Region((0,2),['basket'],'r4')
 r5 = Region((1,2),['rball'],'r5')
 r6 = Region((2,2),[],'r6')
@@ -29,17 +30,14 @@ wfts.add_transition(c3,r3,1)
 
 wfts.add_initial(r1)
 
+#convert ltl formula to buchi automaton
 formula = '<>(rball && <>basket) && <>[]r1'
 buchi = buchi_from_ltl(formula,None)
 my_buchi = Buchi_Automaton(buchi)
 
 full_prod = FullProd(wfts,my_buchi)
 full_prod.construct_fullproduct()
-count = 0
-for i in full_prod.states:
-    for j in full_prod.transition[i].keys():
-        if full_prod.transition[i][j] is not None:
-            count += 1 
 
+#plan synthesize
 opt=search_opt_run(full_prod)
 print 'Plan synthesized:'+str([opt[0][i][0] for i in range(len(opt[0]))])
